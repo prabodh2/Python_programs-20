@@ -6,13 +6,11 @@ class Room:
         self.room_id = room_id
         self.capacity = capacity
         self.reservations = []
-
     def check_availability(self, start_time, end_time):
         for reservation in self.reservations:
             if reservation.is_overlapping(start_time, end_time):
                 return False
         return True
-
     def book_room(self, user, start_time, end_time):
         if self.check_availability(start_time, end_time):
             reservation = Reservation(user, self, start_time, end_time)
@@ -21,27 +19,22 @@ class Room:
             return True
         else:
             return False
-
 class User:
     def __init__(self, user_id, name, email):
         self.user_id = user_id
         self.name = name
         self.email = email
         self.reservations = []
-
     def add_reservation(self, reservation):
         self.reservations.append(reservation)
-
 class Reservation:
     def __init__(self, user, room, start_time, end_time):
         self.user = user
         self.room = room
         self.start_time = start_time
         self.end_time = end_time
-
     def is_overlapping(self, other_start_time, other_end_time):
         return (self.start_time < other_end_time and self.end_time > other_start_time)
-
     def send_notification(self):
         print(f"Notification: Reservation for {self.room.room_id} on {self.start_time} to {self.end_time} confirmed. Email sent to {self.user.email}.")
 
