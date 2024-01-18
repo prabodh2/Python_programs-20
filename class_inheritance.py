@@ -2,56 +2,41 @@ class Shoe:
     def __init__(self,color, brand):
         self.color = color
         self.brand = brand
-        
     def add_shoe(self, shoeType):
         print(f"{shoeType.color} {shoeType.brand} shoes added to store!")
-    
-
 class Converse(Shoe):
     def __init__(self, color,lowOrHighTop,tongueColor):
         super().__init__(color, brand="Converse")
         self.lowOrHighTop = lowOrHighTop
         self.tongueColor = tongueColor
-    
-
     def add_shoe(self, shoeType):
         print(f"{shoeType.color} {shoeType.lowOrHighTop}-top {shoeType.tongueColor} tongue-color {self.brand} added to store!")
-
-
 class CombatShoe(Shoe):
     def __init__(self, color, brand, militiaryBranch, jungleOrDesert):
         super().__init__(color, brand)
         self.militiaryBranch = militiaryBranch
         self.jungleOrDesert = jungleOrDesert
-
     def add_shoe(self, shoeType):
         print(f"{shoeType.color} {shoeType.brand} {self.militiaryBranch} {self.jungleOrDesert}-camo combat boots added to store")
-
-
 class Sandal(Shoe):
     def __init__(self, color, brand, openOrClosedToe, waterproof):
         super().__init__(color, brand)
         self.openOrClosedToe = openOrClosedToe
         self.waterproof = waterproof
-    
     def add_shoe(self, shoeType):
         print(f"{shoeType.color} {shoeType.brand} {self.openOrClosedToe}-toe {self.waterproof} sandals added to store!")
-
 print("----WELCOME TO THE SHOE-STOP(Admin Side)----")
-
 while True:
     print("\n\n1)Regular Shoes")
     print("2)Converse Shoes")
     print("3)Combat Shoes")
     print("4)Sandals")
     choice = int(input("\nWhat do you want to add: "))
-
     if choice == 1:
         color = input("\nEnter color of shoe: ").capitalize()
         brand = input("Enter brand: ").capitalize()
         shoe = Shoe(color, brand)
         shoe.add_shoe(shoe)
-    
     elif choice==2:
         print("\nWelcome to the Converse section!\n")
         color = input("Enter color of converse: ").capitalize()
