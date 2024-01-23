@@ -1,5 +1,4 @@
 # Write a program to compute the frequency of the words from the input. The output should output after sorting the key alphanumerically.
-
 def word_frequency(input_text):
     words = input_text.split()
     word_counts = {}
