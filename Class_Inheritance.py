@@ -70,4 +70,3 @@ while True:
             print("Invalid choice")
         sandal = Sandal(color, brand, openOrClosed, waterProof)
         sandal.add_shoe(sandal)
-
