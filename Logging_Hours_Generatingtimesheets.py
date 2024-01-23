@@ -26,10 +26,8 @@ class Project:
         self.time_entries.append(time_entry)
         if employee not in employee.projects:
             employee.projects.append(self)
-
     def generate_project_timesheet(self, employee, start_date, end_date):
         project_timesheet = f"\nProject: {self.name}\n"
-
         for entry in self.time_entries:
             if entry.employee == employee and start_date <= entry.date <= end_date:
                 project_timesheet += f"{entry.date}: {entry.hours} hours\n"
@@ -49,21 +47,15 @@ class TimeEntry:
         self.employee = employee
         self.hours = hours
         self.date = date
-
-
 employee1 = Employee(employee_id=1, name="u1")
 employee2 = Employee(employee_id=2, name="u2")
-
 project1 = Project(project_id=101, name="Project 1")
 project2 = Project(project_id=102, name="Project 2")
-
 employee1.log_hours(project1, hours=8, date=datetime(2023, 1, 1))
 employee1.log_hours(project2, hours=6, date=datetime(2023, 1, 2))
 employee2.log_hours(project1, hours=7, date=datetime(2023, 1, 1))
 employee2.log_hours(project2, hours=9, date=datetime(2023, 1, 2))
-
 timesheet1 = employee1.generate_timesheet(start_date=datetime(2023, 1, 1), end_date=datetime(2023, 1, 2))
 timesheet2 = employee2.generate_timesheet(start_date=datetime(2023, 1, 1), end_date=datetime(2023, 1, 2))
-
 print(timesheet1)
 print(timesheet2)
