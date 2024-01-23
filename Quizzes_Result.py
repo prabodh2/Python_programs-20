@@ -10,11 +10,8 @@ class Question:
         print(self.question_text)
         for i, option in enumerate(self.options):
             print(f"{i + 1}. {option}")
-
     def is_correct(self, selected_option_index):
         return selected_option_index == self.correct_option_index
-
-
 class Quiz:
     def __init__(self, quiz_name, questions):
         self.quiz_name = quiz_name
@@ -48,10 +45,6 @@ class User:
 
 question1 = Question("What is the capital of India?", ["Mumbai", "Delhi", "London"], correct_option_index=1)
 question2 = Question("What is the largest planet in our solar system?", ["Earth", "Jupiter", "Mars"], correct_option_index=1)
-
 quiz1 = Quiz("General Knowledge Quiz", [question1, question2])
-
 user1 = User("u1")
-
 user1_score = user1.take_quiz(quiz1)
-
