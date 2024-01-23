@@ -33,6 +33,5 @@ total_price = cart.calcTotal()
 print(f"Total Price: ₹{total_price}")
 
 cart.removeItem("Headphones", 1)
-
 updated_total_price = cart.calcTotal()
 print(f"Updated Total Price: ₹{updated_total_price}")
