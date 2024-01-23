@@ -24,21 +24,14 @@ class Stack:
 
     def size(self):
         return len(self.items)
-
-
 testStack = Stack()
-
 testStack.push(10)
 testStack.push(20)
 testStack.push(30)
-
 peekEle = testStack.peek()
 print(f"Top element: {peekEle}")
-
 popEle = testStack.pop()
 print(f"Popped element: {popEle}")
-
 print(f"Is the stack empty? {testStack.isEmpty()}")
-
 size = testStack.size()
 print(f"Size of the stack: {size}")
