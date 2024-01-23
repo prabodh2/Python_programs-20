@@ -32,9 +32,6 @@ class PersonInfo(Employee, Student):
     def display_person_info(self):
         self.display_employee_info()
         self.display_student_info()
-
-
-
 person_info = PersonInfo("Jithendra", 18, "E369", "IT", "S236", "CS")
 
 person_info.display_person_info()
