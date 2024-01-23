@@ -22,7 +22,6 @@ class Quiz:
         for question in self.questions:
             question.display_question()
             selected_option_index = int(input("Enter your answer (1, 2, 3, ...): ")) - 1
-
             if 0 <= selected_option_index < len(question.options):
                 if question.is_correct(selected_option_index):
                     print("Correct!\n")
@@ -31,18 +30,13 @@ class Quiz:
                     print(f"Wrong! The correct answer was: {question.options[question.correct_option_index]}\n")
             else:
                 print("Invalid option. Skipping to the next question.\n")
-
         print(f"Quiz completed! Your score: {user_score}/{len(self.questions)}")
         return user_score
-
-
 class User:
     def __init__(self, username):
         self.username = username
-
     def take_quiz(self, quiz):
         return quiz.take_quiz(self)
-
 question1 = Question("What is the capital of India?", ["Mumbai", "Delhi", "London"], correct_option_index=1)
 question2 = Question("What is the largest planet in our solar system?", ["Earth", "Jupiter", "Mars"], correct_option_index=1)
 quiz1 = Quiz("General Knowledge Quiz", [question1, question2])
