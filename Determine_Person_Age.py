@@ -6,7 +6,6 @@ class Person:
         self.name = name
         self.country = country
         self.dob = datetime.strptime(dob, "%Y-%m-%d")
-
     def calculate_age(self):
         today = datetime.now()
         age = today.year - self.dob.year - ((today.month, today.day) < (self.dob.month, self.dob.day))
