@@ -9,19 +9,16 @@ class Stack:
 
     def push(self, item):
         self.items.append(item)
-
     def pop(self):
         if not self.isEmpty():
             return self.items.pop()
         else:
             print("Stack is empty. Cannot pop from an empty stack.")
-
     def peek(self):
         if not self.isEmpty():
             return self.items[-1]
         else:
             print("Stack is empty. Cannot peek an empty stack.")
-
     def size(self):
         return len(self.items)
 testStack = Stack()
