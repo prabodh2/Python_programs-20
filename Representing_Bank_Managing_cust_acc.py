@@ -3,14 +3,12 @@
 class Bank:
     def __init__(self):
         self.accounts = {}
-
     def createAccount(self, account_number, initial_balance=0):
         if account_number not in self.accounts:
             self.accounts[account_number] = initial_balance
             print(f"Account created successfully for account number {account_number}")
         else:
             print(f"Account with account number {account_number} already exists.")
-
     def checkBalance(self, account_number):
         if account_number in self.accounts:
             balance = self.accounts[account_number]
