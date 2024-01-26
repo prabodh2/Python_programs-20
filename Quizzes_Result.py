@@ -5,7 +5,6 @@ class Question:
         self.question_text = question_text
         self.options = options
         self.correct_option_index = correct_option_index
-
     def display_question(self):
         print(self.question_text)
         for i, option in enumerate(self.options):
