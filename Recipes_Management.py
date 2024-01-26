@@ -3,7 +3,6 @@
 class Ingredient:
     def __init__(self, name):
         self.name = name
-
 class Recipe:
     def __init__(self, title, ingredients, instructions):
         self.title = title
