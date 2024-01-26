@@ -21,8 +21,6 @@ class ShoppingCart:
     def calcTotal(self):
         total = sum(item['price'] * item['quantity'] for item in self.items.values())
         return total
-
-
 cart = ShoppingCart()
 
 cart.addItem("Laptop", 1000)
