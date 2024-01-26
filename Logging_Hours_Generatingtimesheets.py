@@ -31,17 +31,13 @@ class Project:
         for entry in self.time_entries:
             if entry.employee == employee and start_date <= entry.date <= end_date:
                 project_timesheet += f"{entry.date}: {entry.hours} hours\n"
-
         return project_timesheet
-
     def get_total_hours(self, employee, start_date, end_date):
         total_hours = 0
         for entry in self.time_entries:
             if entry.employee == employee and start_date <= entry.date <= end_date:
                 total_hours += entry.hours
         return total_hours
-
-
 class TimeEntry:
     def __init__(self, employee, hours, date):
         self.employee = employee
