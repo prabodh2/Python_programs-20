@@ -4,7 +4,6 @@ class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-
     def display_info(self):
         print(f"Name: {self.name}, Age: {self.age}")
 class Employee:
@@ -28,13 +27,10 @@ class PersonInfo(Employee, Student):
         Employee.__init__(self, employee_id, department)
         Student.__init__(self, student_id, major)
         Person.__init__(self, name, age)
-
     def display_person_info(self):
         self.display_employee_info()
         self.display_student_info()
 person_info = PersonInfo("Jithendra", 18, "E369", "IT", "S236", "CS")
-
 person_info.display_person_info()
-
 person_info.work()
 person_info.study()
