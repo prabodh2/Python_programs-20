@@ -1,10 +1,7 @@
 # Write a Python program to create a class representing a shopping cart. Include methods for adding and removing items, and calculating the total price.
-
-
 class ShoppingCart:
     def __init__(self):
         self.items = {}
-
     def addItem(self, item_name, price, quantity=1):
         if item_name in self.items:
             self.items[item_name]['quantity'] += quantity
