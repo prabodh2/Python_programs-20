@@ -20,10 +20,8 @@ class Cat(Animal):
         self.color = color
     def makeSound(self):
         return "Meow!"
-
     def purr(self):
         return f"{self.name} is purring."
-
 dogObj = Dog(name="dog", age=3, breed="something")
 catObj = Cat(name="cat", age=3, color="xyz")
 
