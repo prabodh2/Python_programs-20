@@ -52,9 +52,7 @@ if available:
     print(f"Room {room1.room_number} is available during the specified time period.")
 else:
     print(f"Room {room1.room_number} is not available during the specified time period.")
-
 room1.book_room(guest1, start_date, end_date)
-
 reservation = guest1.reservations[0]
 total_cost = reservation.calculate_total_cost()
 print(f"Total cost for the reservation: ${total_cost}")
