@@ -22,7 +22,6 @@ class Bank:
             print(f"Deposited ${amount} into account number {account_number}")
         else:
             print(f"Account with account number {account_number} does not exist.")
-
     def withdraw(self, account_number, amount):
         if account_number in self.accounts:
             if self.accounts[account_number] >= amount:
@@ -32,18 +31,12 @@ class Bank:
                 print("Insufficient funds.")
         else:
             print(f"Account with account number {account_number} does not exist.")
-
-
 bank = Bank()
-
 bank.createAccount("12345", 1000)
 bank.createAccount("67890")
-
 bank.checkBalance("12345")
 bank.checkBalance("67890")
-
 bank.deposit("12345", 500)
 bank.withdraw("67890", 200)
-
 bank.checkBalance("12345")
 bank.checkBalance("67890")
