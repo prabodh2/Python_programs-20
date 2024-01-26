@@ -9,7 +9,6 @@ class Car(Vehicle):
 class Bicycle(Vehicle):
     def drive(self):
         return "Bicycle is pedaling on the street."
-
 vehicleObj = Vehicle()
 carObj = Car()
 bicycleObj = Bicycle()
