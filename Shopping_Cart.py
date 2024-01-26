@@ -19,14 +19,11 @@ class ShoppingCart:
         total = sum(item['price'] * item['quantity'] for item in self.items.values())
         return total
 cart = ShoppingCart()
-
 cart.addItem("Laptop", 1000)
 cart.addItem("Headphones", 50, 2)
 cart.addItem("Mouse", 20)
-
 total_price = cart.calcTotal()
 print(f"Total Price: ₹{total_price}")
-
 cart.removeItem("Headphones", 1)
 updated_total_price = cart.calcTotal()
 print(f"Updated Total Price: ₹{updated_total_price}")
