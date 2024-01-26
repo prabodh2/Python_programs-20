@@ -16,7 +16,6 @@ class Quiz:
     def __init__(self, quiz_name, questions):
         self.quiz_name = quiz_name
         self.questions = questions
-
     def take_quiz(self, user):
         user_score = 0
         for question in self.questions:
