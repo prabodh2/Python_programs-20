@@ -1,11 +1,8 @@
 # Define a class attribute “color” with a default value white. i.e., Every Vehicle should be white.
-
 class Vehicle:
     color = "white"
-
     def __init__(self, capacity):
         self.capacity = capacity
-
     def calcFare(self):
         return self.capacity * 100
 class Bus(Vehicle):
