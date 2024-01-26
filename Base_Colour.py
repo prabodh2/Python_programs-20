@@ -8,11 +8,9 @@ class Vehicle:
 
     def calcFare(self):
         return self.capacity * 100
-
 class Bus(Vehicle):
     def __init__(self, capacity):
         super().__init__(capacity)
-
     def calcFare(self):
         base_fare = super().calcFare()
         maintenance_charge = base_fare * 0.10
